@@ -1,6 +1,6 @@
 {
   "name": "sequelize-models",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Node.js SequelizeJS ORM model utilities",
   "homepage": "https://github.com/gbahamondezc/sequelize-models",
   "author": "Gonzalo Bahamondez <gonzalo.bahamondez.c@gmail.com> (https://github.com/gbahamondezc)",
@@ -13,6 +13,7 @@
   },
   "keywords": [
     "sequelize",
+    "postgis",
     "sequelizeJS",
     "models",
     "load",
