@@ -27,7 +27,7 @@ var seqModels = new SequelizeModels({
   });
 
   seqModels
-    .getSchema()
+    .getSchema({ exportTableNames: ['Layers', 'Logs']})
     .then(schema => {
       // schema.models and schema.db available here
       // Some Model
