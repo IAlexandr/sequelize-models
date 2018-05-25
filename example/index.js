@@ -7,7 +7,7 @@ var seqModels = new SequelizeModels({
       port: 5433,
       dialect: 'postgres',
       username: 'postgres',
-      schema: 'template_postgis',
+      schema: 'gis_snowplows',
       password: 'postgres',
     },
 
@@ -31,10 +31,18 @@ var seqModels = new SequelizeModels({
     .then(schema => {
       // schema.models and schema.db available here
       // Some Model
-      schema.db.models.Layers.findAll().then(docs => {
-        console.log('Layers', docs.length);
-        docs[0].getFeatures().then(docs => {
+      schema.db.models.Layers.findOne().then(layer => {
+        console.log('Layer', layer.properties);
+        
+        layer.getFeatures().then(docs => {
             console.log('Features', docs.length);
+        });
+        schema.db.models.Features.findOne()
+        .then(feature => {
+          layer.addFeature(feature)
+          .then(result => {
+            console.log('addFeature', result);
+          });
         });
       });
     })
