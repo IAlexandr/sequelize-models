@@ -1,8 +1,8 @@
 {
-  "name": "sequelize-models",
-  "version": "1.6.2",
+  "name": "sequelize-models-postgis",
+  "version": "1.6.3",
   "description": "Node.js SequelizeJS ORM model utilities",
-  "homepage": "https://github.com/gbahamondezc/sequelize-models",
+  "homepage": "https://github.com/IAlexandr/sequelize-models",
   "author": "Gonzalo Bahamondez <gonzalo.bahamondez.c@gmail.com> (https://github.com/gbahamondezc)",
   "files": [
     "lib"
